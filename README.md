@@ -90,12 +90,6 @@ Incepe o sesiune noua si cere-i lui Claude sa te ajute cu ceva — de exemplu "p
 
 ---
 
-## Credite
-
-Skill-urile sunt bazate pe [Superpowers](https://github.com/obra/superpowers) v4.3.0 de [Jesse Vincent](https://github.com/obra), traduse si adaptate cu branding AI-WIZARD de [Hikari Digital Lab](https://github.com/Hikari-Digital-Lab).
-
----
-
 ## Licenta
 
 MIT License — vezi fisierul [LICENSE](LICENSE) pentru detalii.
