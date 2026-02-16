@@ -1,0 +1,163 @@
+{
+  "name": "wizard-superpowers-marketplace",
+  "description": "AI-WIZARD Marketplace — Skill-uri profesionale pentru Claude Code, traduse si adaptate in limba romana. The runes speak. The code obeys.",
+  "owner": {
+    "name": "AI-WIZARD"
+  },
+  "plugins": [
+    {
+      "name": "using-superpowers",
+      "source": "./",
+      "description": "Meta-skill-ul principal — bootstrappeaza intregul sistem de skill-uri. Stabileste cum sa gasesti si sa folosesti skill-uri, invocand tool-ul Skill INAINTE de orice raspuns.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["skill-discovery", "meta-skill", "invocation", "bootstrap"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "brainstorming",
+      "source": "./",
+      "description": "Transforma ideile in design-uri validate. Exploreaza intentia utilizatorului, cerintele si designul inainte de orice implementare — niciun cod pana nu e aprobat design-ul.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["brainstorming", "design-thinking", "requirements", "ideation"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "writing-plans",
+      "source": "./",
+      "description": "Scrie planuri de implementare ultra-granulare (task-uri de 2-5 min) cu cai exacte de fisiere, snippeturi complete si pasi TDD. Presupune zero context despre codebase.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["implementation-plan", "task-granularity", "documentation", "planning"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "executing-plans",
+      "source": "./",
+      "description": "Executa planuri de implementare in batch-uri de 3 task-uri cu puncte de verificare umane intre batch-uri. Se opreste imediat la blocaje.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["plan-execution", "batch-implementation", "checkpoints", "workflow"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "subagent-driven-development",
+      "source": "./",
+      "description": "Cel mai complet workflow de executie — lanseaza un sub-agent per task cu review in doua etape: conformitate cu specificatia, apoi calitate cod. Include template-uri pentru implementator si revieweri.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["subagent", "two-stage-review", "task-execution", "development-workflow"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "source": "./",
+      "description": "Lanseaza mai multi sub-agenti pentru sarcini independente in paralel. Identifica cand esecurile sunt fara legatura si creeaza prompt-uri focalizate per agent.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["parallel-agents", "concurrent-tasks", "subagents", "performance"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "test-driven-development",
+      "source": "./",
+      "description": "TDD strict cu Legea de Fier: niciun cod de productie fara test care pica mai intai. Ciclu complet RED-GREEN-REFACTOR cu verificari la fiecare etapa. Daca scrii cod inainte de test — sterge si incepe de la zero.",
+      "version": "1.0.0",
+      "category": "testing",
+      "keywords": ["tdd", "red-green-refactor", "test-first", "discipline"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "systematic-debugging",
+      "source": "./",
+      "description": "Depanare sistematica in 4 faze: investigare root cause, analiza pattern-uri, ipoteze si testare, implementare. Dupa 3+ fix-uri esuate, pune la indoiala arhitectura.",
+      "version": "1.0.0",
+      "category": "debugging",
+      "keywords": ["root-cause-analysis", "debugging", "systematic", "investigation"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "requesting-code-review",
+      "source": "./",
+      "description": "Defineste cand si cum sa soliciti code review prin lansarea unui sub-agent reviewer. Obligatoriu dupa task-uri, functionalitati majore si inainte de merge.",
+      "version": "1.0.0",
+      "category": "code-quality",
+      "keywords": ["code-review-request", "quality-gate", "pre-merge", "review"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "receiving-code-review",
+      "source": "./",
+      "description": "Proceseaza feedback-ul de code review corect — fara acord performativ. Evalueaza tehnic, reformuleaza cerinta, verifica in codebase, apoi raspunde cu confirmare sau pushback argumentat.",
+      "version": "1.0.0",
+      "category": "code-quality",
+      "keywords": ["code-review", "feedback-handling", "technical-evaluation", "collaboration"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "verification-before-completion",
+      "source": "./",
+      "description": "Previne declararea lucrului ca finalizat fara verificare proaspata. Legea de Fier: nicio afirmatie de completare fara dovezi reale din comenzi rulate fresh.",
+      "version": "1.0.0",
+      "category": "code-quality",
+      "keywords": ["verification", "evidence-based", "completion-gate", "quality"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "source": "./",
+      "description": "Ghideaza pasul final al workflow-ului: verifica testele, determina branch-ul de baza, prezinta 4 optiuni (merge local, PR, pastreaza, renunta). Nu continua cu teste esuate.",
+      "version": "1.0.0",
+      "category": "devops",
+      "keywords": ["merge", "pull-request", "branch-cleanup", "git-workflow"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "using-git-worktrees",
+      "source": "./",
+      "description": "Proces sistematic pentru crearea de git worktrees izolate. Auto-detecteaza setup-ul proiectului (npm/cargo/pip/go) si verifica baseline curat de teste.",
+      "version": "1.0.0",
+      "category": "devops",
+      "keywords": ["git-worktrees", "workspace-isolation", "branch-management", "version-control"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    },
+    {
+      "name": "writing-skills",
+      "source": "./",
+      "description": "Creaza skill-uri noi aplicand TDD pe documentatie de proces. Faza RED: scenarii de pressure-test. Faza GREEN: skill-ul minimal. Faza REFACTOR: contra-argumente la rationalizari. Include ghid CSO si branding AI-WIZARD.",
+      "version": "1.0.0",
+      "category": "documentation",
+      "keywords": ["skill-creation", "tdd-for-docs", "skill-testing", "meta"],
+      "author": {
+        "name": "AI-WIZARD"
+      }
+    }
+  ]
+}

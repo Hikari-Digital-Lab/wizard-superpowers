@@ -1,0 +1,23 @@
+{
+  "name": "wizard-superpowers",
+  "description": "Biblioteca de skill-uri AI-WIZARD pentru Claude Code: TDD, debugging sistematic, code review, planificare si workflow-uri profesionale - traduse si adaptate in romana",
+  "version": "1.0.0",
+  "author": {
+    "name": "AI-WIZARD"
+  },
+  "homepage": "https://ai-wizard.tech",
+  "repository": "https://github.com/Hikari-Digital-Lab/wizard-superpowers",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "tdd",
+    "debugging",
+    "code-review",
+    "planning",
+    "workflows",
+    "subagents",
+    "brainstorming",
+    "ai-wizard",
+    "romana"
+  ]
+}
