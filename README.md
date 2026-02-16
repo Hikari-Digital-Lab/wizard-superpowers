@@ -2,7 +2,7 @@
 
 **14 skill-uri profesionale pentru Claude Code** — traduse, adaptate si branduite in limba romana.
 
-Bazat pe [Superpowers](https://github.com/obra/superpowers) de Jesse Vincent, acest pachet transforma Claude Code dintr-un simplu asistent intr-un inginer software disciplinat care urmeaza procese verificate.
+Acest pachet transforma Claude Code dintr-un simplu asistent intr-un inginer software disciplinat care urmeaza procese verificate.
 
 ---
 
