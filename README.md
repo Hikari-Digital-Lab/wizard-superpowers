@@ -24,16 +24,16 @@ Nu trebuie sa faci nimic special. Skill-urile se activeaza **automat** in functi
 
 ## Instalare
 
-In Claude Code, inregistreaza marketplace-ul:
+**Pas 1.** Adauga marketplace-ul:
 
 ```bash
 /plugin marketplace add Hikari-Digital-Lab/wizard-superpowers
 ```
 
-Apoi instaleaza plugin-ul:
+**Pas 2.** Instaleaza plugin-ul (numele include marketplace-ul):
 
 ```bash
-/plugin install wizard-superpowers
+/plugin install wizard-superpowers@Hikari-Digital-Lab-wizard-superpowers
 ```
 
 ### Verificare
@@ -43,7 +43,7 @@ Incepe o sesiune noua si cere-i lui Claude sa te ajute cu ceva — de exemplu "p
 ### Actualizare
 
 ```bash
-/plugin update wizard-superpowers
+/plugin marketplace update Hikari-Digital-Lab-wizard-superpowers
 ```
 
 ---
