@@ -1,13 +1,3 @@
-```
-    ·  ☆  ·
-  ◈ ╭────╮ ◈   ✦ AI-WIZARD ✦
-  · │⊛  ⊛│ ·   ────────────────
-  ◈ │ ◆◆ │ ◈   The runes speak.
-  · ╰────╯ ·   The code obeys.
-    ◈  ·  ◈
-    · ☆☆☆ ·
-```
-
 # Wizard Superpowers
 
 **14 skill-uri profesionale pentru Claude Code** — traduse, adaptate si branduite in limba romana.
