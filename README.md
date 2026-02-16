@@ -30,10 +30,10 @@ Nu trebuie sa faci nimic special. Skill-urile se activeaza **automat** in functi
 /plugin marketplace add Hikari-Digital-Lab/wizard-superpowers
 ```
 
-**Pas 2.** Instaleaza plugin-ul (numele include marketplace-ul):
+**Pas 2.** Instaleaza plugin-ul:
 
 ```bash
-/plugin install wizard-superpowers@Hikari-Digital-Lab-wizard-superpowers
+/plugin install wizard-superpowers@wizard-superpowers-marketplace
 ```
 
 ### Verificare
@@ -43,7 +43,7 @@ Incepe o sesiune noua si cere-i lui Claude sa te ajute cu ceva — de exemplu "p
 ### Actualizare
 
 ```bash
-/plugin marketplace update Hikari-Digital-Lab-wizard-superpowers
+/plugin marketplace update wizard-superpowers-marketplace
 ```
 
 ---
