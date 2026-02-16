@@ -1,10 +1,6 @@
 # Wizard Superpowers
 
-**14 skill-uri profesionale pentru Claude Code** — traduse, adaptate si branduite in limba romana.
-
 Acest pachet transforma Claude Code dintr-un simplu asistent intr-un inginer software disciplinat care urmeaza procese verificate.
-
----
 
 ## Cum functioneaza
 
@@ -19,8 +15,6 @@ Nu trebuie sa faci nimic special. Skill-urile se activeaza **automat** in functi
 4. Pe tot parcursul — aplica TDD strict (test inainte de cod, fara exceptii), debugging sistematic si verificare bazata pe dovezi.
 
 **Workflow-uri obligatorii, nu sugestii.**
-
----
 
 ## Instalare
 
@@ -45,8 +39,6 @@ Incepe o sesiune noua si cere-i lui Claude sa te ajute cu ceva — de exemplu "p
 ```bash
 /plugin marketplace update wizard-superpowers-marketplace
 ```
-
----
 
 ## Skill-uri incluse
 
@@ -79,8 +71,6 @@ Incepe o sesiune noua si cere-i lui Claude sa te ajute cu ceva — de exemplu "p
 | **using-superpowers** | Meta-skill: bootstrappeaza sistemul, gaseste si invoca skill-uri automat. |
 | **writing-skills** | Creaza skill-uri noi aplicand TDD pe documentatie de proces. |
 
----
-
 ## Filozofie
 
 - **Test-Driven Development** — Scrie testul mai intai, intotdeauna
@@ -88,13 +78,9 @@ Incepe o sesiune noua si cere-i lui Claude sa te ajute cu ceva — de exemplu "p
 - **Reducerea complexitatii** — Simplitatea ca obiectiv principal
 - **Dovezi, nu afirmatii** — Verifica inainte de a declara succes
 
----
-
 ## Licenta
 
 MIT License — vezi fisierul [LICENSE](LICENSE) pentru detalii.
-
----
 
 <div align="center">
 
