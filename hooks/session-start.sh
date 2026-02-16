@@ -7,55 +7,60 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd)"
 PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
-# ─── Show the wizard logo to the user (stderr = visible in terminal) ───
-
+# ─── Colors (truecolor on black background) ───
 RST="\e[0m"
-B="\e[1m"
-D="\e[2m"
+BG="\e[48;2;0;0;0m"
+F="${BG}\e[38;2;107;80;16m"         # frame — dark bronze
+R="${BG}\e[38;2;139;115;64m"        # rune lines — warm bronze
+C="${BG}\e[38;2;200;168;96m"        # cream text
+G="${BG}\e[38;2;232;184;48m"        # rich gold accents
+A="${BG}\e[38;2;255;208;96m"        # bright gold gems
+H="${BG}\e[1m\e[38;2;255;240;192m"  # hot gold (bold)
+DR="${BG}\e[2m\e[38;2;139;115;64m"  # dim bronze
 
-F="\e[48;2;0;0;0m\e[38;2;107;80;16m"
-R="\e[48;2;0;0;0m\e[38;2;139;115;64m"
-C="\e[48;2;0;0;0m\e[38;2;200;168;96m"
-G="\e[48;2;0;0;0m\e[38;2;232;184;48m"
-A="\e[48;2;0;0;0m\e[38;2;255;208;96m"
-H="\e[48;2;0;0;0m\e[1m\e[38;2;255;240;192m"
-S="\e[48;2;0;0;0m"
-DR="\e[48;2;0;0;0m\e[2m\e[38;2;139;115;64m"
-
-# Fun messages — one picked at random each session
+# ─── Random fun messages (max 46 chars each) ───
 MESSAGES=(
-  "Runele au fost aruncate. Sa inceapa magia!"
+  "Runele-s aruncate. Sa inceapa magia!"
   "Wizard-ul e treaz. Codul tremura."
-  "Potiunea de productivitate a fost baut. Hai la treaba!"
-  "Pergamentul s-a deschis. Ce vraji facem azi?"
-  "Cristalul straluceste. Skill-urile sunt incarcate!"
-  "Bagheta e calibrata. Spune-mi dorinta ta!"
-  "Cercul runic s-a activat. Zero bug-uri tolerate!"
-  "Grimoarul e deschis la pagina TDD. Hai!"
-  "Wizard-ul a meditat. Acum e ready de debug."
-  "Rune fresh, cafea calda, cod curat. Perfectiune!"
+  "Potiunea e bauta. Hai la treaba!"
+  "Pergamentul s-a deschis. Ce vraji facem?"
+  "Skill-urile stralucesc. Gata de actiune!"
+  "Bagheta calibrata. Care-i dorinta ta?"
+  "Cercul runic: activat. Bug-uri: zero."
+  "Grimoarul e deschis la TDD. Hai!"
+  "Wizard-ul a meditat. Ready de debug."
+  "Cafea calda, rune fresh, cod curat."
 )
-
 MSG="${MESSAGES[$((RANDOM % ${#MESSAGES[@]}))]}"
+
+# ─── Draw the wizard box (stderr = visible in terminal) ───
+# Inner width = 52 chars between │ and │
+W=52
+
+# Horizontal rules
+HT=$(printf '─%.0s' $(seq 1 $W))
+
+# Spaces generator (on black bg)
+S() { printf '%*s' "$1" ''; }
 
 {
   echo ""
-  echo -e "  ${F}┌──────────────────────────────────────────┐${RST}"
-  echo -e "  ${F}│${S}    ${G}·${S}  ${H}☆${S}  ${G}·${S}                               ${F}│${RST}"
-  echo -e "  ${F}│${S}  ${A}◈${S} ${R}╭────╮${S} ${A}◈${S}  ${H}✦ AI-WIZARD ✦${S}               ${F}│${RST}"
-  echo -e "  ${F}│${S}  ${G}·${S} ${R}│${A}⊛  ⊛${R}│${S} ${G}·${S}  ${F}──────────────────────${S}  ${F}│${RST}"
-  echo -e "  ${F}│${S}  ${A}◈${S} ${R}│${S} ${H}◆◆${S} ${R}│${S} ${A}◈${S}  ${C}The runes speak.${S}          ${F}│${RST}"
-  echo -e "  ${F}│${S}  ${G}·${S} ${R}╰────╯${S} ${G}·${S}  ${C}The code obeys.${S}           ${F}│${RST}"
-  echo -e "  ${F}│${S}    ${A}◈${S}  ${G}·${S}  ${A}◈${S}                               ${F}│${RST}"
-  echo -e "  ${F}│${S}    ${G}·${S} ${H}☆☆☆${S} ${G}·${S}   ${DR}14 skill-uri incarcate${S}   ${F}│${RST}"
-  echo -e "  ${F}│${S}       ${C}▸ https://ai-wizard.tech${S}          ${F}│${RST}"
-  echo -e "  ${F}├──────────────────────────────────────────┤${RST}"
-  echo -e "  ${F}│${S} ${A}⚡${S} ${H}${MSG}${RST}${S}$(printf '%*s' $((41 - ${#MSG})) '')${F}│${RST}"
-  echo -e "  ${F}└──────────────────────────────────────────┘${RST}"
+  echo -e "  ${F}┌${HT}┐${RST}"
+  echo -e "  ${F}│${BG}    ${G}·${BG}  ${H}☆${BG}  ${G}·${BG}$(S 41)${F}│${RST}"
+  echo -e "  ${F}│${BG}  ${A}◈${BG} ${R}╭────╮${BG} ${A}◈${BG}  ${H}✦ AI-WIZARD ✦${BG}$(S 25)${F}│${RST}"
+  echo -e "  ${F}│${BG}  ${G}·${BG} ${R}│${A}⊛  ⊛${R}│${BG} ${G}·${BG}  ${F}$(printf '─%.0s' $(seq 1 38))${F}│${RST}"
+  echo -e "  ${F}│${BG}  ${A}◈${BG} ${R}│${BG} ${H}◆◆${BG} ${R}│${BG} ${A}◈${BG}  ${C}The runes speak.${BG}$(S 22)${F}│${RST}"
+  echo -e "  ${F}│${BG}  ${G}·${BG} ${R}╰────╯${BG} ${G}·${BG}  ${C}The code obeys.${BG}$(S 23)${F}│${RST}"
+  echo -e "  ${F}│${BG}    ${A}◈${BG}  ${G}·${BG}  ${A}◈${BG}$(S 41)${F}│${RST}"
+  echo -e "  ${F}│${BG}    ${G}·${BG} ${H}☆☆☆${BG} ${G}·${BG}   ${DR}14 skill-uri incarcate${BG}$(S 16)${F}│${RST}"
+  echo -e "  ${F}│${BG}       ${C}▸ https://ai-wizard.tech${BG}$(S 21)${F}│${RST}"
+  echo -e "  ${F}├${HT}┤${RST}"
+  echo -e "  ${F}│${BG} ${A}⚡${BG} ${H}${MSG}${BG}$(S $((49 - ${#MSG})))${F}│${RST}"
+  echo -e "  ${F}└${HT}┘${RST}"
   echo ""
 } >&2
 
-# ─── Inject skill context into Claude (stdout = JSON for Claude) ───
+# ─── Inject skill context into Claude (stdout = JSON) ───
 
 using_superpowers_content=$(cat "${PLUGIN_ROOT}/skills/using-superpowers/SKILL.md" 2>&1 || echo "Error reading using-superpowers skill")
 
